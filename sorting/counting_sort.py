@@ -2,7 +2,7 @@ __author__ = 'Jianfeng'
 """
 Counting sort assumes that each of the n input elements is an integer
 in the range 0 to k.
-Counting sort need two additional list besides the input list A[1..n],
+Counting sort needs two additional lists besides the input list A[1..n],
 B[1..n], which holds the sorted output, and C[0..k], which provides
 temporary working storage.
 """
