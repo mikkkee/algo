@@ -8,7 +8,7 @@ Algorithm Practice
 - [x] Merge sort
 - [x] Heapsort
 - [x] Quicksort
-- [ ] Counting sort
+- [x] Counting sort
 - [ ] Radix sort
 - [ ] Bucket sort
 
