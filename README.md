@@ -11,12 +11,11 @@ Algorithm Practice
 - [x] Counting sort
 - [x] Radix sort
 - [x] Bucket sort
-
-- [ ] Graph of sorting time for each algorithm
+- [x] Graph of sorting time for each algorithm
 
 ### Data Structures
-- [ ] Stacks
-- [ ] Queue
+- [x] Stack
+- [x] Queue
 - [ ] Linked List
 - [ ] Hash Tables
 - [ ] Binary Search Tree
