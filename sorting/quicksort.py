@@ -1,4 +1,5 @@
 __author__ = 'Jianfeng'
+import random
 
 def partition(a, left, right):
     # Divide a list a into two parts by using a index pivot.
@@ -6,6 +7,8 @@ def partition(a, left, right):
     # All items to the right of pivot are >= to a[pivot]
     j = left
     i = left
+    p = random.randint(left, right - 1)
+    a[p], a[right-1] = a[right-1], a[p]
     pivot = right - 1
     while j < pivot:
         if a[j] <= a[pivot]:
