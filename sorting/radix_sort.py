@@ -3,6 +3,8 @@ __author__ = 'Jianfeng'
 """Radix sort uses a stable sorting algorithm."""
 
 def counting_for_radix(a, index, k=9):
+    # A special counting sort for radix sort that uses one digit at
+    # specified position index as the sorting key.
     c = [0 for x in range(k+1)]
     b = [0 for x in range(len(a))]
 
