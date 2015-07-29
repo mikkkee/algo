@@ -8,7 +8,7 @@ def partition(a, left, right):
     i = left
     pivot = right - 1
     while j < pivot:
-        if a[j] < a[pivot]:
+        if a[j] <= a[pivot]:
             a[i], a[j] = a[j], a[i]
             i += 1
             j += 1
