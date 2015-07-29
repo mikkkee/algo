@@ -16,7 +16,7 @@ Algorithm Practice
 ### Data Structures
 - [x] Stack
 - [x] Queue
-- [ ] Linked List
+- [x] Linked List
 - [ ] Hash Tables
 - [ ] Binary Search Tree
 - [ ] Red-Black Tree
