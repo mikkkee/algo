@@ -9,8 +9,8 @@ Algorithm Practice
 - [x] Heapsort
 - [x] Quicksort
 - [x] Counting sort
-- [ ] Radix sort
-- [ ] Bucket sort
+- [x] Radix sort
+- [x] Bucket sort
 
 - [ ] Graph of sorting time for each algorithm
 
