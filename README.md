@@ -34,7 +34,7 @@ Algorithm Practice
 - [ ] Kruskal's Minimum Spanning Tree Algorithm
 - [ ] Huffman Codes
 
-## Graph Algorithms
+### Graph Algorithms
 - [ ] Breadth-first Search
 - [ ] Depth-first Search
 - [ ] Dijkstra's Shortest Path Algorithm
