@@ -17,10 +17,10 @@ class Node(object):
         self.parent = None
 
     def __repr__(self):
-        return "Value: {v}, left: {l}, right: {r}".format(
+        return "[{v}, left: {l}, right: {r}]".format(
             v=self.value,
             l=self.left.value if self.left else None,
-            r=self.right.value if self.right else None
+            r=self.right.value if self.right else None,
         )
 
 class BST(object):
@@ -36,11 +36,22 @@ class BST(object):
 
     def _nodes(self, node=None):
         """All current nodes of bst."""
+        if node is None:
+            node = self.root
+        if node is not None:
+            left = []
+            right = []
+            if node.left is not None:
+                left = self._nodes(node.left)
+            if node.right is not None:
+                right = self._nodes(node.right)
+            return [node] + left + right
 
     def find(self, key):
         """Find a node with value key."""
         node = self.root
         while node is not None:
+            # Return node when found, otherwise node is None.
             if key == node.value:
                 return node
             elif key > node.value:
@@ -69,14 +80,85 @@ class BST(object):
         else:
             self.root = new_node
 
+    def _successor(self, key):
+        """The successor of node with value key, which should have
+        two children.
+        """
+        node = self.find(key)
+        assert(node.left and node.right)
+        node = node.right
+        while node.left:
+            node = node.left
+        return node
+
+    def delete(self, key):
+        """Delete a node with value key."""
+        node = self.find(key)
+        if node is None:
+            # Cannot find specified key.
+            return
+
+        if node.left is None and node.right is None:
+            if node.parent is None:
+                # node is root.
+                self.root = None
+            else:
+                # node is not root.
+                if node == node.parent.left:
+                    node.parent.left = None
+                else:
+                    node.parent.right = None
+        elif node.left is None:
+            # node.right is not none.
+            node.right.parent = node.parent
+            if node.parent is None:
+                # node is root.
+                self.root = node.right
+            else:
+                # node is not root.
+                if node == node.parent.left:
+                    node.parent.left = node.right
+                else:
+                    node.parent.right = node.right
+        elif node.right is None:
+            # node.left is not None.
+            node.left.parent = node.parent
+            if node.parent is None:
+                # node is root.
+                self.root = node.left
+            else:
+                # node is not root.
+                if node == node.parent.left:
+                    node.parent.left = node.left
+                else:
+                    node.parent.right = node.left
+        else:
+            # node has two children.
+            successor = self._successor(node.value)
+            # Delete successor before change node.value to avoid
+            # collision.
+            self.delete(successor.value)
+            node.value = successor.value
+
 
 def main():
     bst = BST()
     bst.insert(1)
     bst.insert(2)
     bst.insert(-1)
-    print bst.root
+    bst.insert(0)
+    bst.insert(-3)
+    bst.insert(1.5)
+    bst.insert(2.5)
+    bst.insert(3)
+    bst.insert(10)
+    bst.insert(8)
+
     print bst
+
+    bst.delete(1)
+    print bst
+    print bst.root
 
 
 if __name__ == '__main__':
