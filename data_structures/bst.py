@@ -23,6 +23,12 @@ class Node(object):
             r=self.right.value if self.right else None,
         )
 
+    @property
+    def depth(self):
+        if self.parent is None:
+            return 0
+        return self.parent.depth + 1
+
 class BST(object):
     def __init__(self, key=None):
         if key is not None:
@@ -139,6 +145,11 @@ class BST(object):
             # collision.
             self.delete(successor.value)
             node.value = successor.value
+
+def print_bst(bst):
+    """A function to print ascii representation of BST."""
+    max_depth = max([x.depth for x in bst._nodes()])
+    max_len = max([len(str(x.value)) for x in bst._nodes()])
 
 
 def main():
