@@ -18,7 +18,7 @@ Algorithm Practice
 - [x] Queue
 - [x] Linked List
 - [ ] Hash Tables
-- [ ] Binary Search Tree
+- [x] Binary Search Tree
 - [ ] Red-Black Tree
 
 ### Dynamics Programming
