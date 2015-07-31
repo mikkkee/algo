@@ -21,22 +21,45 @@ Algorithm Practice
 - [x] Binary Search Tree
 - [ ] Red-Black Tree
 
-### Dynamics Programming
-- [ ] The Knapsack Problem
+### Dynamic Programming
+- [x] The Knapsack Problem
 - [ ] Sequence Alignment
 - [ ] Optimal Search Trees
-- [ ] The Bellman-Ford Algorithm
-- [ ] The Floyd-Warshall Algorithm
-- [ ] Johnson's Algorithm
 
 ### Greedy Algorithms
-- [ ] Prim's Minimum Spanning Tree Algorithm
-- [ ] Kruskal's Minimum Spanning Tree Algorithm
+- [ ] Task scheduling
 - [ ] Huffman Codes
 
 ### Graph Algorithms
 - [ ] Breadth-first Search
 - [ ] Depth-first Search
+- [ ] Prim's Minimum Spanning Tree Algorithm
+- [ ] Kruskal's Minimum Spanning Tree Algorithm
 - [ ] Dijkstra's Shortest Path Algorithm
+- [ ] The Bellman-Ford Algorithm
+- [ ] The Floyd-Warshall Algorithm
+- [ ] Johnson's Algorithm
+- [ ] Ford-Fulkerson method
 
 ### Advanced Data Structures
+- [ ] B-Trees
+- [ ] Binomial Heaps
+- [ ] Fibonacci Heaps
+- [ ] Disjoint Sets
+
+### Selected topics
+- [ ] Sorting networks
+- [ ] The simplex algorithm
+- [ ] Efficient FFT implementations
+- [ ] The naive string-matching algorithm
+- [ ] The Rabin-Karp algorithm
+- [ ] String matching with finite automata
+- [ ] The Knuth-Morris-Pratt algorithm
+- [ ] Segment intersect algorithm
+- [ ] Find convex hull
+- [ ] Find closest pair of points
+
+### NP Problems
+- [ ] Vertex cover problem
+- [ ] Traveling salesman problem
+- [ ] Set cover problem
