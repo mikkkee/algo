@@ -10,8 +10,8 @@ void swap(T &a, T &b) {
 }
 
 template <typename T>
-int partition(std::vector<T> &a, int lo, int hi) {
-  T pivot = a[hi];
+int partition(T &a, int lo, int hi) {
+  auto pivot = a[hi];
   int i = lo;
   int j = lo;
   while (j < hi) {
@@ -28,7 +28,7 @@ int partition(std::vector<T> &a, int lo, int hi) {
 }
 
 template <typename T>
-void quicksort(std::vector<T> &a, int lo, int hi) {
+void quicksort(T &a, int lo, int hi) {
   // std::cout << lo << " " << hi << std::endl;
   if (lo < hi) {
     int p = partition(a, lo, hi);
